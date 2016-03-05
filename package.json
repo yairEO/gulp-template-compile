@@ -1,6 +1,6 @@
 {
   "name"        : "gulp-template-compile-es6",
-  "version"     : "1.1.0",
+  "version"     : "1.0.0",
   "description" : "Gulp task to precompile lodash templates into ES6 exported variables",
   "main"        : "index.js",
   "author"      : {

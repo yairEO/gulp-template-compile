@@ -27,11 +27,33 @@ var concat   = require('gulp-concat');
 
 gulp.task('default', function () {
 	gulp.src('src/*.html')
-		.pipe(template()) // pass any settings here
+		.pipe(template({
+            templateSettings : {
+                variable : 'data'
+            }
+        })) // pass any settings here
 		.pipe(concat('templates.js'))
 		.pipe(gulp.dest('dist'));
 });
 ```
+
+### Above will output the file `templates.js`:
+
+(for 2 simple html files `a.html` & `b.html` which contains the string "foo" & "bar")
+
+```js
+export var a = function(data) {
+    var __t, __p = '';
+    __p += 'foo';
+    return __p;
+}
+
+export var b = function(data) {
+    var __t, __p = '';
+    __p += 'bar';
+    return __p;
+}
+
 
 ## API
 
@@ -55,9 +77,9 @@ Example:
 
 ```js
 {
-	name: function (file) {
-		return 'tpl-' + file.relative;
-	}
+    name: function (file) {
+        return 'tpl-' + file.relative;
+    }
 }
 ```
 
