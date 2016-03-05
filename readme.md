@@ -53,7 +53,7 @@ export var b = function(data) {
     __p += 'bar';
     return __p;
 }
-
+```
 
 ## API
 
