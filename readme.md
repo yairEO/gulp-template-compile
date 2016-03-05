@@ -4,14 +4,16 @@
 
 ## Synopsis
 
-This plugin is heavily inspired by [Sindre Sorhus](https://github.com/sindresorhus)'s [gulp-nunjucks](https://github.com/sindresorhus/gulp-nunjucks) plugin, in fact I used it as skeleton for creating this one.
+This plugin is heavily inspired by [Emanuele Ingrosso](https://www.npmjs.com/package/gulp-template-compile-es6).
+
+I've written [another plugin](https://github.com/yaireo/gulp-file-contents-to-modules) which only exports templates' string and can also wrap them with a compilation function
 
 ## Install
 
-Install with [npm](https://www.npmjs.org/package/gulp-template-compile)
+Install with [npm](https://www.npmjs.org/package/gulp-template-compile-es6)
 
 ```
-npm install --save-dev gulp-template-compile
+npm install --save-dev gulp-template-compile-es6
 ```
 
 ## Example
@@ -19,13 +21,13 @@ npm install --save-dev gulp-template-compile
 ### `gulpfile.js`
 
 ```js
-var gulp = require('gulp');
-var template = require('gulp-template-compile');
-var concat = require('gulp-concat');
+var gulp     = require('gulp');
+var template = require('gulp-template-compile-es6');
+var concat   = require('gulp-concat');
 
 gulp.task('default', function () {
 	gulp.src('src/*.html')
-		.pipe(template())
+		.pipe(template()) // pass any settings here
 		.pipe(concat('templates.js'))
 		.pipe(gulp.dest('dist'));
 });
@@ -71,16 +73,7 @@ Default: null
 
 [Lo-Dash `_.template` options](http://lodash.com/docs#template).
 
-## Changelog
-
-#### 1.0:
-* **BREAKING**: Added support for custom dotted namespaces.
-
-## Notes
-
-If you use [grunt](http://gruntjs.com) instead of gulp, but want to perform a similar task, use [grunt-contrib-jst](https://github.com/gruntjs/grunt-contrib-jst).
-
 
 ## License
 
-MIT © Emanuele Ingrosso
+MIT © Yair Even-Or
