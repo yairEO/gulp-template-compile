@@ -9,7 +9,7 @@
   },
   "repository": {
     "type" : "git",
-    "url"  : "https://github.com/yairEO/gulp-template-compile"
+    "url"  : "https://github.com/yairEO/gulp-template-compile-es6"
   },
   "files": [
     "index.js"

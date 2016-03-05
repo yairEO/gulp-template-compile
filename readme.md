@@ -13,7 +13,7 @@ I've written [another plugin](https://github.com/yaireo/gulp-file-contents-to-mo
 Install with [npm](https://www.npmjs.org/package/gulp-template-compile-es6)
 
 ```
-npm install --save-dev gulp-template-compile-es6
+npm i --save-dev gulp-template-compile-es6
 ```
 
 ## Example
